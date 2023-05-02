@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Router from "./Routes/router";
 
 function App() {
-  const [data, setData] = useState([{}]);
+  const [data, setData] = useState({});
 
   useEffect(() => {
     fetch("http://localhost:5000/chuva")
@@ -18,14 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* <div> */}
-      {typeof data.chuva === "undefined" ? (
-        <p>Loading...</p>
-      ) : (
-        data.chuva.map((chuva, i) => (
-          <p key={i}>Quantidade de chuva em recife:{chuva}</p>
-        ))
-      )}
-      {/* </div> */}
+      {data.chuva}
       <Header />
       <Router />
     </BrowserRouter>
