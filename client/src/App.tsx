@@ -17,6 +17,15 @@ function App() {
 
   return (
     <BrowserRouter>
+      {/* <div> */}
+      {typeof data.chuva === "undefined" ? (
+        <p>Loading...</p>
+      ) : (
+        data.chuva.map((chuva, i) => (
+          <p key={i}>Quantidade de chuva em recife:{chuva}</p>
+        ))
+      )}
+      {/* </div> */}
       <Header />
       <Router />
     </BrowserRouter>
