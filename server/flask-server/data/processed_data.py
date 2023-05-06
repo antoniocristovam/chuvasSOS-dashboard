@@ -1,6 +1,7 @@
 import pandas as pd
 from process.process_data import *
 
+
 def process_data(data):
     local_tags = data[0]
     last_24hours_tags = data[1]
@@ -12,9 +13,9 @@ def process_data(data):
 
     psdf = pd.DataFrame.from_dict(
         {
-            'Locals': locals,
-            'Time-Date' : date_time,
-            'Last-24-hours': last_24hours,
+            'locals': locals,
+            'timeData': date_time,
+            'Last24hours': last_24hours,
         }
     )
 
