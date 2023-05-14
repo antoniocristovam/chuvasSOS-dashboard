@@ -1,0 +1,92 @@
+export const fakeDataShelters = [
+  {
+    id: 1,
+    local: "Escola Municipal Diná de Oliveira (ABRIGO)",
+    endereco: "Rua São Mateus, s/n, Iputinga",
+    city: "Caruaru",
+  },
+  {
+    id: 2,
+    name: "Escola Municipal Casarão do Barbalho (ABRIGO)",
+    endereco: "Estrada do Barbalho, nº 1595, Iputinga	",
+    city: "Caruaru",
+  },
+  {
+    id: 3,
+    name: "Escola Municipal Maria de Sampaio Lucena (ABRIGO)	",
+    endereco: "Av. Pernambuco, s/n, UR 01, Cohab	",
+    city: "Caruaru",
+  },
+  {
+    id: 4,
+    name: "Escola Municipal Poeta Paulo Bandeira da Cruz",
+    endereco: "Rua das Panelas, nº 28, UR 02, Cohab	",
+    city: "Caruaru",
+  },
+  {
+    id: 5,
+    name: "Escola Municipal Adauto Pontes (ABRIGO)",
+    endereco: "R. Sertânia, 35 - Jordão Alto, Recife - PE, 51...	",
+    city: "Caruaru",
+  },
+  {
+    id: 6,
+    name: "E.M. 27 de Novembro (ABRIGO)	",
+    endereco: "Av. Doze de Junho, nº 1120, UR 05, Cohab	",
+    city: "Caruaru",
+  },
+  {
+    id: 7,
+    name: "CENTRO DE APOIO SOCIAL ESPORTIVO E CULTURAL",
+    endereco: "Rua Rio da Prata, s/n	",
+    city: "Caruaru",
+  },
+  {
+    id: 8,
+    name: "IGREJA POÇO DA PANELA (PONTO DE APOIO)",
+    endereco: "R. Antônio Vitrúvio, 71	",
+    city: "Caruaru",
+  },
+  {
+    id: 9,
+    name: "IGREJA ORAI (ABRIGO)	",
+    endereco: "R. Tucumã, 127 - Ibura	",
+    city: "Caruaru",
+  },
+  {
+    id: 10,
+    name: "CASA DE DONA ÉRICA (PONTO DE APOIO)",
+    endereco: "Travessa Benigno Jordão de Vasconcelos, n 41	",
+    city: "Caruaru",
+  },
+  {
+    id: 11,
+    name: "ASSOCIAÇÃO DE MORADORES VILA VINTÉM II (PONTO ...",
+    endereco: "Rua Tinto, 153	",
+    city: "Caruaru",
+  },
+  {
+    id: 12,
+    name: "ESCOLA MUNICIPAL CAMPINA DO BARRETO - CAJUEIRO...",
+    endereco: "Avenida Vereador Otacílio de Azevedo, 730	",
+    city: "Caruaru",
+  },
+  {
+    id: 13,
+    name: "	PARÓQUIA NOSSA SRA. DOS REMÉDIOS (CARANGUEJO-T...",
+    endereco: "R. Dona Ana Aurora, 2042 - Areias	",
+    city: "Caruaru",
+  },
+  {
+    id: 13,
+    name: "	ESCOLA MUNICIPAL RICARDO GAMA (ABRIGO)",
+    endereco: "Rua Virgílio de Melo Franco, nº 28	",
+    city: "Caruaru",
+  },
+  {
+    id: 13,
+    name: "	IGREJA BATISTA CÓRREGO DO TIRO (ABRIGO)",
+    endereco: "Estrada dos Remédios, 1603	",
+    city: "Caruaru",
+  },
+];

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import Router from "./Routes/router";
-import DataTable from "react-data-table-component";
 
 function App() {
   const [data, setData] = useState({});
