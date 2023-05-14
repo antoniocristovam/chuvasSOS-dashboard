@@ -1,7 +1,5 @@
-// Import
 import { Container } from "./styles";
 
-// Interface
 interface IProps {
   Icon: string;
   Text: string;
@@ -9,7 +7,7 @@ interface IProps {
 
 const SidebarItem = ({ Icon, Text }: IProps) => {
   return (
-    <Container>
+    <Container className="">
       <Icon />
       {Text}
     </Container>

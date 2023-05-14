@@ -1,18 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100px;
+  height: 70px;
   display: flex;
   background-color: #1a202c;
-  box-shadow: 0 0 20px 3px;
+`;
 
-  > svg {
-    position: fixed;
-    color: white;
-    width: 30px;
-    height: 30px;
-    margin-top: 32px;
-    margin-left: 32px;
-    cursor: pointer;
-  }
+export const Content = styled.div`
+  margin-top: 42px;
+`;
+
+export const Image = styled.img`
+  width: 110px;
+  height: 50px;
+  padding-left: 20px;
 `;
