@@ -7,9 +7,9 @@ interface IProps {
 }
 
 export const Container = styled.div<IProps>`
-  background-color: #171923;
+  background-color: #1a202c;
   position: fixed;
-  height: 100%;
+  height: 100vh;
   top: 0px;
   left: 0px;
   width: 300px;
@@ -17,12 +17,10 @@ export const Container = styled.div<IProps>`
   animation: showSidebar 0.4s;
 
   > svg {
-    position: fixed;
     color: white;
     width: 30px;
     height: 30px;
-    margin-top: 32px;
-    margin-left: 32px;
+    margin: 32px;
     cursor: pointer;
   }
 
@@ -39,5 +37,9 @@ export const Container = styled.div<IProps>`
 `;
 
 export const Content = styled.div`
-  margin-top: 100px;
+  margin-top: 42px;
 `;
+
+export const Image = styled.img`
+  width: 124px;
+`

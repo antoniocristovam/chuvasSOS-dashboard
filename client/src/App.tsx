@@ -16,33 +16,13 @@ function App() {
       });
   }, []);
 
-  console.log(data);
-  const columns = [
-    {
-      name: "Cidade",
-      selector: (row) => row.title,
-    },
-    {
-      name: "Inde chuva",
-      selector: (row) => row.year,
-    },
-  ];
-
-  const dataTable = [
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-    },
-  ];
-
   return (
     <BrowserRouter>
       {/* {console.log(data.locals)} */}
 
       {/* <p>{data.locals[7]}</p> */}
 
-      <DataTable columns={columns} data={dataTable} />
+      {/* <DataTable columns={columns} data={dataTable} /> */}
       {/* <div> */}
       {/* {typeof data.locals === "undefined" ? (
         <p>Loading...</p>
