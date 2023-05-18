@@ -1,4 +1,5 @@
 import { TableColumn } from "react-data-table-component";
+import { IconHoverAnimation } from "../../../../components/iconHoverAnimation";
 
 export interface SHELTERS {
   id: number;
@@ -28,6 +29,16 @@ export const columns: TableColumn<SHELTERS>[] = [
     name: "",
     style: {
       justifyContent: "end",
+    },
+    cell: () => {
+      return (
+        <div>
+          <IconHoverAnimation
+            path="/media/icons/duotune/bootstrap/trash3.svg"
+            color="dark"
+          />
+        </div>
+      );
     },
   },
 ];

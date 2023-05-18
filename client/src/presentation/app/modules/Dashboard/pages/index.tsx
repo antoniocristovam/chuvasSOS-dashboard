@@ -65,13 +65,27 @@ const Dashboard = () => {
 
   return (
     <>
-      <Container className="pt-4">
-        <h1> MONITORAMENTO DE CHUVA EM TEMPO REAL</h1>
+      <Container className="pt-4 ">
+        <h1 className="text-center">MONITORAMENTO DE CHUVA EM TEMPO REAL</h1>
         <div id="chart">
           <ReactApexChart
             options={data.options}
             series={data.series}
             type="bar"
+            height={350}
+          />
+        </div>
+      </Container>
+      <Container className="pt-4 ">
+        <h1 className="text-center">
+          {" "}
+          LOCAIS QUE MAIS CHOVEU NAS ULTIMAS 24 HORAS
+        </h1>
+        <div>
+          <ReactApexChart
+            options={data.options}
+            series={data.series}
+            type="scatter"
             height={350}
           />
         </div>

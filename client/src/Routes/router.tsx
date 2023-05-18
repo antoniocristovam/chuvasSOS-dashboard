@@ -1,7 +1,7 @@
 // Import
-import Alerts from "../modules/Alerts/pages";
-import Dashboard from "../modules/Dashboard/pages";
-import Shelters from "../modules/Shelters/pages";
+import Alerts from "../presentation/app/modules/Alerts/pages";
+import Dashboard from "../presentation/app/modules/Dashboard/pages";
+import Shelters from "../presentation/app/modules/Shelters/pages";
 import { Routes, Route } from "react-router-dom";
 
 function Router() {

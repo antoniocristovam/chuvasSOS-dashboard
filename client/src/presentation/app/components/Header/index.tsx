@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SidebarItem from "../SidebarItem";
 
 // Logo
-import logo from "../../img/chuvaSOS.png";
+import logo from "../../../../img/chuvaSOS.png";
 
 const Header = () => {
   return (
