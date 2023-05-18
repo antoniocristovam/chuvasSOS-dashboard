@@ -33,7 +33,7 @@
 }
 
 .rdt_TableRow {
-  background-color: rgba(0, 0, 0, 0.01) !important;
+  background-color: rgba(0, 0, 0, 0.064) !important;
   color: white;
   border-bottom-color: transparent !important;
   border-bottom: none !important;
@@ -108,5 +108,3 @@
 [data-bs-theme='dark'] .rdt_Pagination button {
   fill: #fff5f8 !important;
 }
-
-// Fim de pagination

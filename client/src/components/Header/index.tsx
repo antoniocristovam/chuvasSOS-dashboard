@@ -1,36 +1,31 @@
-// Import
-import Logo from "../../images/chuvaSOS.png";
-// Import
-import { Container, Content, Image } from "./styles";
 import { FaHome, FaUserAlt, FaChartBar } from "react-icons/fa";
-import SidebarItem from "../SidebarItem";
 import { Nav, NavLink } from "reactstrap";
 import { Link } from "react-router-dom";
+import SidebarItem from "../SidebarItem";
+
+// Logo
+import logo from "../../img/chuvaSOS.png";
 
 const Header = () => {
   return (
-    <Container>
-      <Image src={Logo} />
-      <Content>
-        <Nav>
-          <NavLink className="option">
-            <Link to={"/"} style={{ textDecoration: "none" }}>
-              <SidebarItem Icon={FaHome} Text="Home" />
-            </Link>
-          </NavLink>
-          <NavLink className="option">
-            <Link to={"/alertas"} style={{ textDecoration: "none" }}>
-              <SidebarItem Icon={FaChartBar} Text="Alertas" />
-            </Link>
-          </NavLink>
-          <NavLink className="option">
-            <Link to={"/abrigos"} style={{ textDecoration: "none" }}>
-              <SidebarItem Icon={FaUserAlt} Text="Abrigos" />
-            </Link>
-          </NavLink>
-        </Nav>
-      </Content>
-    </Container>
+    <>
+      <Nav className="navbar navbar-light bg-dark">
+        <a className="navbar-brand" href="#">
+          <img className="ms-4" src={logo} width="75" height="35" />
+        </a>
+        <NavLink className="option d-flex">
+          <Link to={"/"} className="text-decoration-none">
+            <SidebarItem Icon={FaHome} Text="Home" />
+          </Link>
+          <Link to={"/alertas"} className="text-decoration-none">
+            <SidebarItem Icon={FaChartBar} Text="Alertas" />
+          </Link>
+          <Link to={"/abrigos"} className="text-decoration-none">
+            <SidebarItem Icon={FaUserAlt} Text="Abrigos" />
+          </Link>
+        </NavLink>
+      </Nav>
+    </>
   );
 };
 

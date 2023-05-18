@@ -5,9 +5,9 @@ interface IProps {
   Text: string;
 }
 
-const SidebarItem = ({ Icon, Text }: IProps) => {
+const SidebarItem = ({ Text, Icon }: IProps) => {
   return (
-    <Container className="">
+    <Container className="d-flex align-items-center pe-4 ">
       <Icon />
       {Text}
     </Container>
