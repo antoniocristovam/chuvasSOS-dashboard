@@ -2,12 +2,6 @@ import axios from "axios";
 import { useState } from "react";
 import { Button, Container, Form, FormGroup, Input, Label } from "reactstrap";
 
-interface Notification{
-  title: string;
-  message: string;
-  priority: string;
-}
-
 const Alerts = () => {
 
   const [ title, setTitle ] = useState<string>();

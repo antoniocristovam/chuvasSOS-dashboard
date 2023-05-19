@@ -14,7 +14,7 @@ const Dashboard = () => {
   const [data, setData] = useState(Array<chuva>);
 
   useEffect(() => {
-    fetch("http://localhost:5000/chuva")
+    fetch("http://localhost:5000/rain/rainfalls")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
