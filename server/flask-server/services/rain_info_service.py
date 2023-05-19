@@ -1,19 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from data.processed_data import process_data
-from firebase_admin import messaging
-
-def send_notification(data):
-    topic = "warning"
-    message = messaging.Message(
-                notification = messaging.Notification(
-                        title=data["title"],
-                        body=data["message"]
-                    ),
-                topic=topic
-            )
-    messaging.send(message)
-    print("Notificação enviada com sucesso")
+from utils.processed_data import process_data
 
 def get_all_rainfall_index(local_cod):
     url = 'http://old.apac.pe.gov.br/_lib/pluviometria.request.php'
@@ -32,8 +19,10 @@ def get_all_rainfall_index(local_cod):
             date_time_tags.append(column[0])
             date_time_tags.append(column[1])
 
-        return process_data([local_tags, last_hours_tags, date_time_tags])
+        return process_data(local_tags, last_hours_tags, date_time_tags)
 
     else:
         print("ERROR")
         raise Exception("Error to get data")
+
+
