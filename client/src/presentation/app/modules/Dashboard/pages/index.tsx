@@ -4,13 +4,12 @@ import ReactApexChart from "react-apexcharts";
 import { Container } from "reactstrap";
 
 interface chuva {
-  local : string;
+  local: string;
   date_time: string;
   last_24hours: string;
 }
 
 const Dashboard = () => {
-
   const [data, setData] = useState(Array<chuva>);
 
   useEffect(() => {
@@ -22,39 +21,43 @@ const Dashboard = () => {
       });
   }, []);
 
+  const local_array = data.map((e) => e.local);
+  const formatValues = (data: Array<chuva>) => {
+    return data.map((e) =>
+      parseFloat(e.last_24hours.split("m")[0].replace(",", "."))
+    );
+  };
 
-  const local_array = data.map( (e) => e.local )
-  const chuvaMm = data.map( (e) => parseFloat(e.last_24hours.split('m')[0].replace(',','.')) )
-  console.log(chuvaMm)
+  const chuvaMm = formatValues(data);
 
-  const arrayData : ApexOptions = {
+  const arrayData: ApexOptions = {
     series: [
       {
         name: "Website Blog",
         type: "column",
         data: chuvaMm,
-      }
+      },
     ],
-    
-      chart: {
-        height: 350,
-        type: "line",
-      },
-      stroke: {
-        width: [0, 4],
-      },
-      title: {
-        text: "Chuva em tempo real",
-      },
-      dataLabels: {
-        enabled: true,
-        enabledOnSeries: [1],
-      },
-      labels: local_array,
-      xaxis: {
-        type: "category",
-      },
-      yaxis: [],
+
+    chart: {
+      height: 350,
+      type: "line",
+    },
+    stroke: {
+      width: [0, 4],
+    },
+    title: {
+      text: "Chuva em tempo real",
+    },
+    dataLabels: {
+      enabled: true,
+      enabledOnSeries: [1],
+    },
+    labels: local_array,
+    xaxis: {
+      type: "category",
+    },
+    yaxis: [],
   };
 
   return (
