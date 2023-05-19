@@ -1,4 +1,3 @@
-import pandas as pd
 from process.process_data import *
 
 
@@ -11,12 +10,13 @@ def process_data(data):
     last_24hours = list(map(get_tag_content, last_24hours_tags))
     date_time = concat_date_and_time(date_time_tags)
 
-    psdf = pd.DataFrame.from_dict(
-        {
-            'locals': locals,
-            'timeData': date_time,
-            'Last24hours': last_24hours,
-        }
-    )
+    response = []
 
-    return psdf
+    for i in range(len(locals)):
+        response.append({
+            "local": locals[i],
+            "last_24hours": last_24hours[i],
+            "date_time": date_time[i] 
+        })
+
+    return response
