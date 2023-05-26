@@ -1,6 +1,14 @@
 import axios from "axios";
 import { useState } from "react";
-import { Button, Container, Form, FormGroup, Input, Label } from "reactstrap";
+import {
+  Button,
+  Col,
+  Container,
+  Form,
+  FormGroup,
+  Input,
+  Label,
+} from "reactstrap";
 
 const Alerts = () => {
   const [title, setTitle] = useState("");
@@ -18,7 +26,7 @@ const Alerts = () => {
 
   return (
     <>
-      <Container>
+      <Container className="mt-5">
         <Form>
           <FormGroup>
             <Label for="title">Título</Label>
@@ -29,7 +37,9 @@ const Alerts = () => {
               type="text"
               onChange={(value) => setTitle(value.target.value)}
             />
-            <Label for="message">Corpo</Label>
+            <Label className="mt-2" for="message">
+              Descrição
+            </Label>
             <Input
               id="message"
               name="message"
@@ -37,19 +47,32 @@ const Alerts = () => {
               type="textarea"
               onChange={(value) => setMessage(value.target.value)}
             />
-            <Label for="exampleSelectMulti">Prioridade</Label>
-            <Input
-              id="priority"
-              multiple
-              name="priority"
-              type="select"
-              onChange={(value) => setPriority(value.target.value)}
-            >
-              <option>Alta</option>
-              <option>Média</option>
-              <option>Baixa</option>
-            </Input>
-            <Button onClick={submit}>Enviar</Button>
+            <Label className="mt-2" for="exampleSelectMulti">
+              Prioridade
+            </Label>
+            <FormGroup row>
+              <Col sm={12}>
+                <Input
+                  id="priority"
+                  name="select"
+                  type="select"
+                  onChange={(value) => setPriority(value.target.value)}
+                >
+                  <option>Estado de Observação</option>
+                  <option>Estado de Atenção</option>
+                  <option>Estado de Alerta</option>
+                </Input>
+              </Col>
+            </FormGroup>
+            <Button className="btn btn-success" onClick={submit}>
+              Enviar
+            </Button>
+            <div className="mt-5">
+              <h4>Entenda os diferentes níveis de avisos:</h4>
+              <p>Estado de Observação - RISCO MODERADO</p>
+              <p>Estado de Atenção: RISCO MODERADO A ALTO</p>
+              <p>Estado de Alerta: - RISCO MUITO ALTO</p>
+            </div>
           </FormGroup>
         </Form>
       </Container>

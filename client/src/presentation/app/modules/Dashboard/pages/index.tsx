@@ -73,20 +73,6 @@ const Dashboard = () => {
           />
         </div>
       </Container>
-      <Container className="pt-4 ">
-        <h1 className="text-center">
-          {" "}
-          LOCAIS QUE MAIS CHOVEU NAS ULTIMAS 24 HORAS
-        </h1>
-        <div>
-          <ReactApexChart
-            options={arrayData}
-            series={arrayData.series}
-            type="bar"
-            height={350}
-          />
-        </div>
-      </Container>
     </>
   );
 };
