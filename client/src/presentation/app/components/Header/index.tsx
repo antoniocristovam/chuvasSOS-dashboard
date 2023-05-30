@@ -1,4 +1,10 @@
-import { FaHome, FaUserAlt, FaChartBar } from "react-icons/fa";
+import {
+  FaHome,
+  FaUserAlt,
+  FaChartBar,
+  FaMapSigns,
+  FaMapMarked,
+} from "react-icons/fa";
 import { Nav, NavLink } from "reactstrap";
 import { Link } from "react-router-dom";
 import SidebarItem from "../SidebarItem";
@@ -21,7 +27,10 @@ const Header = () => {
             <SidebarItem Icon={FaChartBar} Text="Alertas" />
           </Link>
           <Link to={"/abrigos"} className="text-decoration-none">
-            <SidebarItem Icon={FaUserAlt} Text="Abrigos" />
+            <SidebarItem Icon={FaMapMarked} Text="Abrigos" />
+          </Link>
+          <Link to={"/infos"} className="text-decoration-none">
+            <SidebarItem Icon={FaUserAlt} Text="Informações" />
           </Link>
         </NavLink>
       </Nav>

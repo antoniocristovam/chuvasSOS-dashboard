@@ -9,7 +9,7 @@ from firebase_admin import credentials
 db_service.init()
 
 #Inicializando projeto no firebase para envio de notificações
-firebase_cred = credentials.Certificate("/home/guilherme/Projetos/ChuvaSOS/firebase_settings/credentials.json")
+firebase_cred = credentials.Certificate("C:/Users/anton/Documents/credentials.json")
 firebase_app = firebase_admin.initialize_app(firebase_cred)
 
 #Configurando Flask
