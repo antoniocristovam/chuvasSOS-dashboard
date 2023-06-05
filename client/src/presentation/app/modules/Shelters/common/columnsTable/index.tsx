@@ -1,14 +1,16 @@
 import { TableColumn } from "react-data-table-component";
 import { IconHoverAnimation } from "../../../../components/iconHoverAnimation";
+import { shelter } from "../../pages";
+import { Trash } from "phosphor-react";
+import axios from "axios";
 
-export interface SHELTERS {
-  id: number;
-  name: string;
-  endereco: string;
-  bairro: string;
-}
-
-export const columns: TableColumn<SHELTERS>[] = [
+export const columns: TableColumn<shelter>[] = [
+  {
+    name: "Id",
+    selector: (row) => row.id ?? 0,
+    width: "10%",
+    sortable: true
+  },
   {
     name: "Nome",
     selector: (row) => row.name,
@@ -17,12 +19,12 @@ export const columns: TableColumn<SHELTERS>[] = [
   },
   {
     name: "Endereço",
-    selector: (row) => row.endereco,
+    selector: (row) => row.address,
     sortable: true,
   },
   {
     name: "Bairro",
-    selector: (row) => row.bairro,
+    selector: (row) => row.district,
     sortable: true,
   },
   {
@@ -30,13 +32,20 @@ export const columns: TableColumn<SHELTERS>[] = [
     style: {
       justifyContent: "end",
     },
-    cell: () => {
+    cell: (row) => {
+
+      const redirect = () => {
+        window.open(`https://www.google.com/maps/@${row.lat},${row.long},15z?entry=ttu`);
+      }
+
       return (
         <div>
           <IconHoverAnimation
             path="/media/icons/duotune/bootstrap/trash3.svg"
             color="dark"
+            onClick={redirect}
           />
+
         </div>
       );
     },

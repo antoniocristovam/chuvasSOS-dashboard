@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "3911581639",
+    "project_id": "chuvasos",
+    "storage_bucket": "chuvasos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3911581639:android:56cee9de19a41cab0423e2",
+        "android_client_info": {
+          "package_name": "com.example.chuvasos_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3911581639-79oqogrstmkr7v7tbgiv8k0l6t2ap1su.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG2pnxVSX-erkalSFvyVt7T4K_u4bJmlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3911581639-79oqogrstmkr7v7tbgiv8k0l6t2ap1su.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

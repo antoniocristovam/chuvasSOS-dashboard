@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>3911581639-mdrspjpr101349hlo2a3id1aonpudfao.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.3911581639-mdrspjpr101349hlo2a3id1aonpudfao</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAadOg-jV8EkLHf8gROTKhGQgIHqPyXaMk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>3911581639</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.chuvasosApp</string>
+	<key>PROJECT_ID</key>
+	<string>chuvasos</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chuvasos.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:3911581639:ios:d94daf4610f4a33b0423e2</string>
+</dict>
+</plist>
