@@ -15,10 +15,43 @@ def init():
                      'name TEXT NOT NULL, address TEXT NOT NULL, district TEXT NOT NULL, lat REAL NOT NULL, long REAL NOT NULL ) ')
         print('Shelter table created successfully')
 
+        conn.execute(
+            'CREATE TABLE IF NOT EXISTS tokens (id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT NOT NULL)')
+        print('Tokens table created successfully')
+
         conn.close()
     except Exception as e:
         print('Something wrong happened')
         print(e)
+
+
+def save_token(token):
+    try:
+        with sql.connect('database.db') as conn:
+            cursor = conn.cursor()
+            cursor.execute('INSERT INTO tokens (token)' +
+                           'VALUES (?)', (token,))
+            conn.commit()
+    except Exception as e:
+        print(e)
+        conn.rollback()
+        raise Exception('Error in insert operation')
+    finally:
+        conn.close()
+
+
+def get_token_by_token(token):
+    try:
+        with sql.connect('database.db') as conn:
+            cursor = conn.cursor()
+            cursor.execute(
+                'SELECT token FROM tokens where token = ?', (token,))
+            return cursor.fetchone()
+    except Exception as e:
+        print(e)
+        raise Exception('Error in select operation')
+    finally:
+        conn.close()
 
 
 def save_shelter(shelter):

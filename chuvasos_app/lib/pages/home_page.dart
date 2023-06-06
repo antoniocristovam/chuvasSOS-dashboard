@@ -1,3 +1,4 @@
+import 'package:chuvasos_app/pages/shelter_page.dart';
 import 'package:chuvasos_app/pages/weather_page.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<Widget> screens = [WeatherPage(), Text('Abrigos'), Text('infos')];
+  final List<Widget> screens = [WeatherPage(), ShelterPage(), Text('infos')];
   final List<String> titles = ['Clima', 'Abrigos', 'Informações'];
   int _currentPage = 0;
 

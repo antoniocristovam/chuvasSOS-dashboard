@@ -16,9 +16,14 @@ class _WeatherPageState extends State<WeatherPage> {
   List<RainfallInfo> rainfalls = [];
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
     _getRainfallInfos();
 
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -82,7 +87,7 @@ class _WeatherPageState extends State<WeatherPage> {
 
   void _getRainfallInfos() async {
     var response =
-        await http.get(Uri.http('192.168.0.110:5000', '/rain/rainfalls'));
+        await http.get(Uri.http('172.16.2.184:5000', '/rain/rainfalls'));
     List responseList = jsonDecode(response.body);
     setState(() {
       rainfalls = responseList.map((e) => RainfallInfo.fromJson(e)).toList();

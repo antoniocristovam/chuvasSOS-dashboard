@@ -42,6 +42,12 @@ def notification():
         return notification_controller.get_all_notifications()
 
 
+@app.route('/notification/token', methods=['POST'])
+def register_token():
+    if request.method == 'POST':
+        return notification_controller.register_token(request.json)
+
+
 @app.route('/shelter', methods=['GET', 'POST'])
 def shelter():
     if request.method == 'POST':
